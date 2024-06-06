@@ -33,4 +33,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: hello-world
-        path: **/*.jar
+        path: .jar
