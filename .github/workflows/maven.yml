@@ -32,9 +32,8 @@ jobs:
     - name: find the artifact
       run: |
         find . -type f -name "*.jar" > artifacts.txt
-    - name: upload artifact
-      uses: actions/upload-artifact@v3
+    - name: publish artifact
+      uses: actions/upload-artifact@v2
       with:
         name: hello-world
-        path: |
-          $(cat artifacts.txt)
+        path: /home/runner/work/Azure-Dev/Azure-Dev/target/*.jar
